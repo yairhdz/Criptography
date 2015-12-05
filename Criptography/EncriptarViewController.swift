@@ -31,6 +31,10 @@ class EncriptarViewController: UIViewController, UITextFieldDelegate {
         self.encriptedText.layer.borderColor = UIColor.whiteColor().CGColor
         self.encriptedText.layer.backgroundColor = nil
         self.encriptedText.text = nil
+        
+        self.textToEncript.returnKeyType  = .Done
+        self.keyToEncript.returnKeyType   = .Done
+        self.keyToEncript.secureTextEntry = true
     }
     
     @IBAction func encriptarAction(sender: UIButton) {
