@@ -24,13 +24,21 @@ class Utility {
         view.layer.insertSublayer(gradientLayer, atIndex: 0)
     }
     
-    static func formatButtom(button: UIButton, frame: CGRect) {
-        button.frame = frame
-        button.layer.cornerRadius = 8.0
+    static func formatButtom(button: UIButton, frame: CGRect?, cornerRadius: CGFloat?) {
+        if let frame = frame {
+            button.frame = frame
+        }
+        
+        if let cornerRadius = cornerRadius {
+            button.layer.cornerRadius = cornerRadius
+        } else {
+            button.layer.cornerRadius = 8.0
+        }
+        
         button.layer.borderWidth = 1.0
         button.layer.borderColor = UIColor.whiteColor().CGColor
         button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        button.setTitleColor(UIColor.lightGrayColor(), forState: UIControlState.Highlighted)
+        button.setTitleColor(UIColor.blackColor(), forState: UIControlState.Highlighted)
     }
 
 }
