@@ -124,7 +124,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Encriptar"/>
                                 <connections>
-                                    <action selector="encriptarAction:" destination="Pyn-UP-Z5W" eventType="touchUpInside" id="QjK-nN-fUd"/>
+                                    <action selector="encryptAction:" destination="Pyn-UP-Z5W" eventType="touchUpInside" id="KVz-qf-aFz"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="MqC-zg-bTO">
@@ -140,10 +140,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Encriptar" id="qKj-9M-8JU"/>
                     <connections>
-                        <outlet property="encriptarButton" destination="kzG-Nx-TUl" id="6Vw-Iw-68F"/>
-                        <outlet property="encriptedText" destination="MqC-zg-bTO" id="5hx-FR-cTe"/>
-                        <outlet property="keyToEncript" destination="EB1-nD-bTa" id="Cih-3C-Ruy"/>
-                        <outlet property="textToEncript" destination="P8s-DS-8rd" id="PXx-2W-oq8"/>
+                        <outlet property="encryptButton" destination="kzG-Nx-TUl" id="eCd-Pf-cL7"/>
+                        <outlet property="encryptedText" destination="MqC-zg-bTO" id="PwB-43-iHc"/>
+                        <outlet property="keyToEncrypt" destination="EB1-nD-bTa" id="cWG-Bc-ziQ"/>
+                        <outlet property="textToEncrypt" destination="P8s-DS-8rd" id="gBP-OG-rwk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Kf-Pf-JmX" userLabel="First Responder" sceneMemberID="firstResponder"/>

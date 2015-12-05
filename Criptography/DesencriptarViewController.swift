@@ -49,8 +49,9 @@ class DesencriptarViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        textToDecrypt.resignFirstResponder()
-        keyToDecrypt.resignFirstResponder()
+        self.textToDecrypt.resignFirstResponder()
+        self.keyToDecrypt.resignFirstResponder()
+        self.decryptButton.resignFirstResponder()
     }
 
     /*
