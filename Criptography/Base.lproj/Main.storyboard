@@ -86,6 +86,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Encriptar"/>
+                                <connections>
+                                    <action selector="encriptarAction:" destination="Pyn-UP-Z5W" eventType="touchUpInside" id="QjK-nN-fUd"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="MqC-zg-bTO">
                                 <rect key="frame" x="40" y="375" width="240" height="128"/>
