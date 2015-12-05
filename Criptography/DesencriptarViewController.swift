@@ -39,6 +39,7 @@ class DesencriptarViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func decryptAction(sender: UIButton) {
+        Utility.resignFirsrResponder(self.view)
         self.decryptedText.layer.borderWidth = 1.0
         self.decryptedText.text = self.textToDecrypt.text
     }
@@ -49,9 +50,7 @@ class DesencriptarViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        self.textToDecrypt.resignFirstResponder()
-        self.keyToDecrypt.resignFirstResponder()
-        self.decryptButton.resignFirstResponder()
+        Utility.resignFirsrResponder(self.view)
     }
 
     /*

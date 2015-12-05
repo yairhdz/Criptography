@@ -38,6 +38,7 @@ class EncriptarViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func encryptAction(sender: UIButton) {
+        Utility.resignFirsrResponder(self.view)
         self.encryptedText.layer.borderWidth = 1.0
         self.encryptedText.text = self.textToEncrypt.text
     }
@@ -49,8 +50,7 @@ class EncriptarViewController: UIViewController, UITextFieldDelegate {
     
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        self.textToEncrypt.resignFirstResponder()
-        self.keyToEncrypt.resignFirstResponder()
+        Utility.resignFirsrResponder(self.view)
     }
     
     /*

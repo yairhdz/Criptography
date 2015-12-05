@@ -40,5 +40,13 @@ class Utility {
         button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         button.setTitleColor(UIColor.blackColor(), forState: UIControlState.Highlighted)
     }
+    
+    static func resignFirsrResponder(view: UIView) {
+        for subview in view.subviews {
+            if let textField = subview as? UITextField {
+                textField.resignFirstResponder()
+            }
+        }
+    }
 
 }

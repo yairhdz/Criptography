@@ -84,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				B0607E741C126F60001E6C20 /* AppDelegate.swift */,
+				B0607E961C127889001E6C20 /* Utility.swift */,
 				B0607E941C127036001E6C20 /* MainViewController.swift */,
 				B0607E9C1C1279E9001E6C20 /* EncriptarViewController.swift */,
 				B0607E9D1C1279E9001E6C20 /* DesencriptarViewController.swift */,
@@ -91,7 +92,6 @@
 				B0607E7B1C126F60001E6C20 /* Images.xcassets */,
 				B0607E7D1C126F60001E6C20 /* LaunchScreen.xib */,
 				B0607E721C126F60001E6C20 /* Supporting Files */,
-				B0607E961C127889001E6C20 /* Utility.swift */,
 			);
 			path = Criptography;
 			sourceTree = "<group>";
