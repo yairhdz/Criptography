@@ -36,6 +36,7 @@ class DesencriptarViewController: UIViewController, UITextFieldDelegate {
         self.decryptedText.layer.cornerRadius = 8.0
         self.decryptedText.layer.borderColor = UIColor.whiteColor().CGColor
         self.decryptedText.layer.backgroundColor = nil
+        self.decryptedText.textColor = UIColor.whiteColor()
         self.decryptedText.text = nil
         
         self.textToDecrypt.returnKeyType  = .Done

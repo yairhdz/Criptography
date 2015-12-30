@@ -36,6 +36,7 @@ class EncriptarViewController: UIViewController, UITextFieldDelegate {
         self.encryptedText.layer.cornerRadius = 8.0
         self.encryptedText.layer.borderColor = UIColor.whiteColor().CGColor
         self.encryptedText.layer.backgroundColor = nil
+        self.encryptedText.textColor = UIColor.whiteColor()
         self.encryptedText.text = nil
         
         self.textToEncrypt.returnKeyType  = .Done
