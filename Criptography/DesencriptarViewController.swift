@@ -70,6 +70,11 @@ class DesencriptarViewController: UIViewController, UITextFieldDelegate {
         }
         
         self.decryptedText.text = String(self.textoDesencriptado)
+        self.clave = []
+        self.textoCifrado = ""
+        self.arrayTextoCifrado = []
+        self.arrayTextoClave = []
+        self.textoDesencriptado = []
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {

@@ -18,7 +18,6 @@ class EncriptarViewController: UIViewController, UITextFieldDelegate {
     var textoPlano: String = String()
     var clave: [Character] = [Character]()
     var textoCifrado: [Character] = [Character]()
-//    let arrayTextoPlano: [Character] = Array(textoPlano.characters)
     var arrayTextoPlano: [Character] = [Character]()
     var arrayTextoClave: [Character] = [Character]()
     
@@ -68,6 +67,11 @@ class EncriptarViewController: UIViewController, UITextFieldDelegate {
         }
         
         self.encryptedText.text = String(self.textoCifrado)
+        self.textoPlano = ""
+        self.clave = []
+        self.textoCifrado = []
+        self.arrayTextoPlano = []
+        self.arrayTextoClave = []
         
     }
     
