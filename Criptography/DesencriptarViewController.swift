@@ -15,6 +15,12 @@ class DesencriptarViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var decryptButton: UIButton!
     @IBOutlet weak var decryptedText: UITextView!
     
+    var clave: [Character] = [Character]()
+    var textoCifrado: String = String()
+    var arrayTextoCifrado: [Character] = [Character]()
+    var arrayTextoClave: [Character] = [Character]()
+    var textoDesencriptado: [Character] = [Character]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +48,28 @@ class DesencriptarViewController: UIViewController, UITextFieldDelegate {
         Utility.resignFirsrResponder(self.view)
         self.decryptedText.layer.borderWidth = 1.0
         self.decryptedText.text = self.textToDecrypt.text
+        
+        self.textoCifrado = self.textToDecrypt.text!
+        self.arrayTextoCifrado = Array(self.textoCifrado.characters)
+        
+        let claveString = self.keyToDecrypt.text
+        self.clave = Array(claveString!.characters)
+        
+        self.arrayTextoClave = criptography.getTextoClave(self.clave, arrayTextoPlano: self.arrayTextoCifrado)
+        
+        var arrayNuevosIndicesDecifrado: [Int] = []
+        for var i = 0; i < arrayTextoCifrado.count; i++ {
+            let indice = criptography.getNuevosIndicesDescifrar(arrayTextoCifrado[i], charTextoClave: arrayTextoClave[i])
+            arrayNuevosIndicesDecifrado.append(indice)
+        }
+        
+        
+        for var i = 0; i < arrayNuevosIndicesDecifrado.count; i++ {
+            let char = criptography.alfabeto[arrayNuevosIndicesDecifrado[i]]
+            self.textoDesencriptado.append(char)
+        }
+        
+        self.decryptedText.text = String(self.textoDesencriptado)
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {

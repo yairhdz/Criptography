@@ -15,6 +15,13 @@ class EncriptarViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var encryptButton: UIButton!
     @IBOutlet weak var encryptedText: UITextView!
     
+    var textoPlano: String = String()
+    var clave: [Character] = [Character]()
+    var textoCifrado: [Character] = [Character]()
+//    let arrayTextoPlano: [Character] = Array(textoPlano.characters)
+    var arrayTextoPlano: [Character] = [Character]()
+    var arrayTextoClave: [Character] = [Character]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,6 +48,27 @@ class EncriptarViewController: UIViewController, UITextFieldDelegate {
         Utility.resignFirsrResponder(self.view)
         self.encryptedText.layer.borderWidth = 1.0
         self.encryptedText.text = self.textToEncrypt.text
+        
+        self.textoPlano = textToEncrypt.text!
+        self.arrayTextoPlano = Array(self.textoPlano.characters)
+        let claveString = self.keyToEncrypt.text
+        self.clave = Array(claveString!.characters)
+        
+        self.arrayTextoClave = criptography.getTextoClave(self.clave, arrayTextoPlano: self.arrayTextoPlano)
+        
+        var arrayNuevosIndices: [Int] = []
+        for var i = 0; i < arrayTextoPlano.count; i++ {
+            let indice = criptography.getNuevosIndicesEncriptar(arrayTextoPlano[i], charTextoClave: arrayTextoClave[i])
+            arrayNuevosIndices.append(indice)
+        }
+        
+        for var i=0; i<arrayNuevosIndices.count; i++ {
+            let char = criptography.alfabeto[arrayNuevosIndices[i]]
+            self.textoCifrado.append(char)
+        }
+        
+        self.encryptedText.text = String(self.textoCifrado)
+        
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {

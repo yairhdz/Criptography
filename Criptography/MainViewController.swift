@@ -46,7 +46,7 @@ class MainViewController: UIViewController {
     
     
     func test() {
-        let texto: String = "paris vaut"
+//        let texto: String = "paris vaut"
         let textoPlano: String = "PaRis VaUt"
         let clave: [Character] = ["L", "O", "U", "P"]
         var textoCifrado: [Character] = []
@@ -55,7 +55,7 @@ class MainViewController: UIViewController {
         print("EL TEXTO EN ARRAY ES \(arrayTextoPlano)")
         
         var indexKey = 0
-        for char in arrayTextoPlano {
+        for _ in arrayTextoPlano {
             arrayTextoClave.append(clave[indexKey])
             indexKey += 1
             if indexKey > clave.count - 1 {
